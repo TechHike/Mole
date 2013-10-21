@@ -1,0 +1,14 @@
+<entry>
+	<title>{{ post.title_encoded }}</title>
+	<link rel="alternate" type="text/html" href="{{ post.full_url }}" />
+	<id>{{ post.full_url }}</id>
+	<published>{{ post.date_utc_iso }}</published>
+	<updated>{{ post.date_utc_iso }}</updated>
+	<author>
+		<name>Clint Simon</name>
+		<uri>{{ site.url }}</uri>
+	</author>
+	<content type="html" xml:lang="en">
+		{{ post.body_encoded }}
+	</content>
+</entry>

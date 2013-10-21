@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>{{ browser_title }}</title>
+		<link rel="alternate" type="application/atom+xml" title="ATOM" href="feed.xml" />
+		
+		<link rel="icon" href="/favicon.ico">
+		<link rel="SHORTCUT ICON" href="/favicon.ico">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />	
+
+		<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<link rel="stylesheet" href="files/base.css"/>
+
+		<script type="text/javascript" src="files/base.js"></script>
+	
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu+Condensed|Orbitron:400" rel="stylesheet" type="text/css" />
+		
+		<meta name="google-site-verification" content="9122UHrLTdTksyNCp_xG5dypMZu2evQmgwu43GVHjOo" />
+
+		<script type="text/javascript">
+		/*
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', '{UA-CODE-HERE}']);
+		  _gaq.push(['_setDomainName', '{DOMAIN-HERE}']);
+		  _gaq.push(['_setAllowLinker', true]);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		 */
+
+		 	InitializeTweets('{{ site.twitter_username }}');
+
+		</script>
+
+		<style>
+			#heading-wrap {
+				background-color: {{ site.head_color }};
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id="heading-wrap">
+			<div id="heading-logo">
+			</div>
+			<div id="heading">
+
+				<div class="title"><a href="index.html">{{ site.title }}</a></div>
+
+				<ul class="heading-nav">
+					<li><a href="archive.html">Archive</a></li>
+					<li><a href="topics.html">Topics</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+				<div class="clear"></div>
+				
+			</div>
+		</div>
+		
+		<div id="body-wrap">
+
+			<div id="main">
+				{{ content }}
+			</div>
+
+			<div id="nav">
+				<div class="nav-section nav-section-2">
+					<ul>
+						<li><a href="archive.html">Archive</a></li>
+						<li><a href="topics.html">Topics</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+
+
+				<div class="nav-section nav-section-3">
+					<a href="https://twitter.com/{{ site.twitter_username }}" class="twitter-follow-button" data-show-count="false">Follow @{{ site.twitter_username }}</a>
+					<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+					<div id="tweet"></div>
+				</div>
+		
+				<div class="clear"></div>
+				
+			</div>
+			<div class="clear"></div>
+		</div>
+
+    </body>
+</html>

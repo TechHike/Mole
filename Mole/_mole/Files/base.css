@@ -1,0 +1,753 @@
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.3.0
+build: 3167
+*/
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html{
+	color:#000;
+	background:#FFF;
+}
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF. 
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,
+img {
+	border:0;
+}
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style:normal;
+	font-weight:normal;
+}
+/*
+	TODO Figure out where this list-style rule is best set. Hedger has a request to investigate.
+*/
+li {
+	list-style:none;
+}
+
+caption,
+th {
+	text-align:left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,
+q:after {
+	content:'';
+}
+abbr,
+acronym {
+	border:0;
+	font-variant:normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+	*font-size:100%;
+}
+/*because legend doesn't inherit in IE */
+legend {
+	color:#000;
+}
+
+
+
+
+/****************************************************************************/
+
+
+
+body {
+	color: #000;
+	margin: 0;
+	padding: 0;
+	font: normal 14px/1.45em Verdana, "Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+}
+
+p {
+	display: block;
+	margin: 0 0 1.2em 0;
+}
+
+#heading-output, #outer {
+	width: 920px;
+	margin: 0 auto;
+}
+
+
+a, a:active, a:visited {
+	font-weight: normal;
+	color: #222;
+	text-decoration: none;
+	border-bottom: 1px dotted black;
+}
+
+a:hover {
+	border-bottom: 1px solid black;
+}
+
+
+
+#heading, #heading-logo, #body-wrap {
+	width: 840px;
+	margin: 0 auto;
+}
+
+#heading, #heading-logo {
+}
+
+
+#body-wrap {
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+
+
+#heading-wrap {
+	padding-top: 10px;
+	display: block;
+	background: #af200a;
+}
+
+#heading .title {
+	font-family: verdana;
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 1em;
+}
+
+#heading .title a {
+	color: white;
+	border-bottom: none;
+}
+
+#heading .title a:hover {
+	text-decoration: none;
+}
+
+#heading {
+	margin-top: 20px;
+}
+
+#heading .title {
+}
+
+#heading .title, #heading .title a {
+	padding: 0;
+	margin: 0;
+	font-family: 'Orbitron', sans-serif;
+	float: left;
+}
+
+
+#heading ul.heading-nav {
+	float: right;
+	margin-top: 18px;
+	margin-right: 10px;
+	display: none;
+}
+
+#heading ul.heading-nav li {
+	display: inline;
+	margin-left: 20px;
+}
+
+#heading ul.heading-nav li,
+#heading ul.heading-nav li a,
+#heading ul.heading-nav li a:hover,
+#heading ul.heading-nav li a:visited,
+#heading ul.heading-nav li a:active,
+#heading ul.heading-nav li a:link {
+	color: white;
+	text-decoration: none;
+	border: 0;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+
+
+#main {
+	float: left;
+	width: 600px;
+	margin-top: 10px;
+}
+
+html.admin-page #body-wrap {
+	width: auto;
+	padding-left: 10px;
+	padding-right: 30px;
+}
+
+html.admin-page #main {
+	float: none;
+	width: auto;
+}
+
+html.admin-page .admin-actions {
+	text-align: right;
+}
+
+#nav {
+	float: right;
+	width: 200px;
+	border-left: 1px solid #eee;
+	padding: 0 0 0 20px;
+}
+
+#nav h2 {
+	font-size: 18px;
+	margin: 15px 0 3px 0;
+}
+
+#nav ul li {
+	line-height: 2em;
+}
+
+.social-icons {
+	margin-top: 10px;
+}
+
+.social-icons a,
+.social-icons a:active,
+.social-icons a:visited {
+	border: none;
+}
+
+
+.nav-section {
+	margin-bottom: 20px;
+}
+
+.nav-section-1 {
+	margin-top: 20px;
+}
+
+.nav-section-actions {
+	width: 150px;
+}
+
+
+.post {
+	clear: both;
+}
+
+.post-date {
+	float: right;
+	font-size: 11px;
+	color: #666;
+	margin: 3px 0;
+	margin-right: 25px;
+	padding: 5px 0 0 20px;
+	display: none;
+}
+
+.post {
+	clear: both;
+	font-size: 15px;
+	line-height: 1.7em;
+}
+
+.post em {
+	font-style: italic;
+}
+
+.post strong,
+.post strong a,
+.post strong a,
+.post strong a:link,
+.post strong a:active,
+.post strong a:hover,
+.post strong a:visited {
+	font-weight: bold;
+}
+
+.post ul,
+.post ol {
+	margin: 0 0 20px 20px;
+}
+
+.post ul li {
+	list-style: disc;
+	list-style-position: outside;
+}
+
+.post ol li {
+	list-style: decimal;
+	list-style-position: outside;
+}
+
+.post blockquote {
+	margin: 0em 1em 1em 1em;
+	padding: 1px 1em;
+	border-left: solid 3px #eee;
+	color: #666;
+	font-size: 13px;
+}
+
+.post blockquote > p:first-of-type {
+	margin-top: 0;
+}
+
+.post blockquote > p:last-of-type {
+	margin-bottom: 0;
+}
+
+.post h1,
+.post h2,
+.post h3,
+.post h4 {
+	margin: 25px 0 0 0;
+}
+
+
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h1 a, .post h1 a,
+.post h2 a, .post h2 a,
+.post h3 a, .post h3 a,
+.post h4 a, .post h4 a,
+.post h3 a, .post h3 a {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+.post h1 {
+	line-height: 1.2em;
+	margin-bottom: 15px;
+}
+
+.post h1,
+.post h1 a,
+.post h1 a:active,
+.post h1 a:visited {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 28px;
+	font-weight: normal;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+.post h3, .post h3 a {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.post h4, .post h4 a {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.post img {
+	float: right;
+	max-width: 50%;
+	margin: 0 0 10px 10px;
+}
+
+.post .vinette {
+	clear: both;
+	text-align: center;
+	margin: 1em 0;
+}
+
+.post .vinette img {
+	float: none;
+	display: block;
+	max-width: 90%;
+	margin: 10px auto;
+}
+
+.post .vinette img p {
+	clear: both;
+}
+
+.post .vinette img a {
+	clear: both;
+}
+
+.post .roll {
+	clear: both;
+}
+
+.post code {
+	font-size: 12px;
+	line-height: 8px;
+}
+
+.post .roll img {
+	float: left;
+	max-width: 45%;
+	max-height: 150px;
+	margin: 15px 5px;
+}
+
+.post .roll + p {
+	clear: both;
+}
+
+.post h1 + p,
+.post h2 + p,
+.post h3 + p,
+.post h4 + p,
+.post h5 + p {
+}
+
+.post-comments {
+	clear: both;
+	margin: 30px 0 0 0;
+}
+
+.post hr {
+	margin: 30px 50px;
+}
+
+
+.view-archive {
+	padding-top: 30px;
+}
+
+.view-archive td {
+	padding: 0px;
+}
+
+.view-archive td.year, .view-archive td.month, .view-archive td.posts {
+	vertical-align: top;
+	padding: 5px 0;
+}
+
+.view-archive td.year {
+	font-size: 20px;
+	line-height: 20px;
+	text-align: right;
+	width: 40px;
+}
+
+.view-archive td.month {
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 20px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	text-align: right;
+	padding-top: 8px;
+	width: 90px;
+}
+
+.view-archive td.day {
+	font-size: 16px;
+	vertical-align: top;
+	padding: 6px 3px 0 3px;
+	width: 20px;
+}
+
+.view-archive td.post {
+	padding-top: 6px;
+	padding-left: 5px;
+	vertical-align: top;
+}
+
+.view-archive td.link {
+	padding-top: 7px;
+}
+
+h1.topic-heading {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	margin-left: 100px;
+}
+
+
+ul.topic-toc {
+	display: block;
+	padding-bottom: 50px;
+}
+
+ul.topic-toc li {
+	font-size: 18px;
+	list-style-type: none;
+	margin-top: 10px;
+	margin-right: 20px;
+	float: left;
+}
+
+ul.topic-page-heading {
+}
+
+ul.topic-page-heading li {
+	margin: 15px 0 5px 0;	
+}
+
+ul.topic-page-heading li a {
+	font-size: 16px;
+}
+
+
+.clear {
+	clear: both;
+}
+
+
+
+#tweet {
+}
+
+.tweet {
+	margin: 0 0 5px 0;
+	padding: 5px 0 5px 0;
+	border-top: 1px solid #eee;
+}
+
+.tweet.first {
+	border-top: 0;
+}
+
+body {
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.post-date {
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.post {
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.post h1, .post h2, .post h3, .post h4, .post h5 {
+	font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.nav-section-2 {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 26px;
+}
+
+#nav .nav-section-2 ul li {
+	line-height: 1.5em;
+}
+
+#nav .nav-section-2 ul li a {
+	text-decoration: none;
+	border: 0;
+}
+	
+.view-archive td.year, .view-archive td.month {	
+	font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.post-separator {
+	border-top: 1px solid #eee;
+	margin: 35px 30px;
+}
+
+.more-posts {
+	margin: 20px 0px;
+	margin-right: 40px;
+	text-align: right;
+}
+
+.more-posts  a {
+	line-height: 1.2em;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 28px;
+	text-decoration: : none;
+}
+
+
+.hide {
+	display: none;
+}
+
+
+
+
+/****** Tablet Devices *************/
+@media screen and (max-width:1000px) {
+	
+	#body-wrap, #main, #heading, #heading-logo {
+		width: auto;
+	}
+	
+	#heading-logo {
+		margin-left: 20px;
+	}
+	
+	#heading, #heading-logo, #body-wrap {
+		padding-left: 20px;		
+		padding-right: 20px;		
+	}	
+	
+	#main {
+		float: none;
+		display: block;
+	}
+	
+	#nav {
+	  display: block;
+	  width: auto;
+	  float: none;
+	  border: none;
+	  border-top: 1px solid #eee;
+	  margin-top: 60px;
+	  padding: 20px 10px 10px 10px;
+	}
+	
+	.nav-section {
+		float: left;
+		margin-right: 30px;
+		width: 200px;
+	}
+
+	#heading ul.heading-nav {
+		display: block;
+	}
+
+	.nav-section-1 {
+		margin-top: 0;
+		width: 240px;
+	}
+	
+	.nav-section-2 {
+		width: 120px;
+	}
+
+	.nav-section-3 {
+		width: 180px;
+	}
+
+	.nav-section-actions {
+		width: 150px;
+	}
+
+	.post {
+		font-size: 17px;
+	}
+	
+	.post img {
+		max-width: 40%;
+	}
+
+	.post .vinette img {
+		max-width: 100%;
+	}
+}
+ 
+ 
+ /****** Phone Devices *************/
+@media screen and (max-width:960px) {
+}
+
+@media screen and (max-width:640px) {
+
+	#heading .title {
+		font-size: 25px;
+	}
+
+	#heading ul.heading-nav li, #heading ul.heading-nav li a, #heading ul.heading-nav li a:hover, #heading ul.heading-nav li a:visited, #heading ul.heading-nav li a:active, #heading ul.heading-nav li a:link
+	{
+		font-size: 12px;
+	}
+
+	#heading {
+		padding-right: 5px;
+	}
+
+	#heading ul.heading-nav {
+	}
+
+	#heading ul.heading-nav li {
+		margin-left: 5px;
+	}
+
+	.post img {
+		float: none;
+		max-width: 100%;
+		margin: 10px auto;
+	}
+}
+
+@media screen and (max-width:320px) {
+
+}
+
+
+
