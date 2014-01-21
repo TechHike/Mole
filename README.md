@@ -13,7 +13,7 @@ markdown files. It works well for simple sites with a blog and a set of pages.
 Paste the following line at the powershell prompt.
 
 `
-(new-object Net.WebClient).DownloadString("https://raw.github.com/TechHike/Mole/master/Install.ps1") | iex
+(new-object Net.WebClient).DownloadString("https://raw.github.com/TechHike/mole/master/Install.ps1") | iex
 `
 
 This will download all the necessary Mole files and import the Mole module. When the process is finished, you should see a message that says:
